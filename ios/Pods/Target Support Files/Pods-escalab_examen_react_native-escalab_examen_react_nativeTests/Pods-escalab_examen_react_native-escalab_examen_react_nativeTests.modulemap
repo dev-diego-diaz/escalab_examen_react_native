@@ -1,0 +1,6 @@
+module Pods_escalab_examen_react_native_escalab_examen_react_nativeTests {
+  umbrella header "Pods-escalab_examen_react_native-escalab_examen_react_nativeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

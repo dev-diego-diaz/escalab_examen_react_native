@@ -1,0 +1,14 @@
+com/escalab_examen_react_native/MainActivity.java
+ com.escalab_examen_react_native.MainActivity
+com/escalab_examen_react_native/ReactNativeFlipper.java
+ com.escalab_examen_react_native.ReactNativeFlipper
+ com.escalab_examen_react_native.ReactNativeFlipper$1
+ com.escalab_examen_react_native.ReactNativeFlipper$2
+ com.escalab_examen_react_native.ReactNativeFlipper$2$1
+com/escalab_examen_react_native/MainApplication.java
+ com.escalab_examen_react_native.MainApplication
+ com.escalab_examen_react_native.MainApplication$1
+com/escalab_examen_react_native/BuildConfig.java
+ com.escalab_examen_react_native.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
