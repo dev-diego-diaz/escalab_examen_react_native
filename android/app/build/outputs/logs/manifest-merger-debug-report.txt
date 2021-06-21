@@ -14,6 +14,7 @@ MERGED from [:react-native-gesture-handler] /Users/diego/Desktop/escalab_examen_
 MERGED from [:react-native-reanimated] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-vector-icons] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/diego/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -172,6 +173,8 @@ MERGED from [:react-native-safe-area-context] /Users/diego/Desktop/escalab_exame
 MERGED from [:react-native-safe-area-context] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/diego/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/diego/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
