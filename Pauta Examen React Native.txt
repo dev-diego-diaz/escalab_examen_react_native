@@ -1,0 +1,36 @@
+
+...::: Datos para enviar proyecto :::...
+
+    correo: jorellana@escalab.academy 
+    Asunto: Proyecto React Native Gen 2 
+
+
+...::: Debe incluir :::...
+
+    1) Repositorio correspondiente en GITHUB
+    2) Instrucciones para levantar el proyecto (en caso de requerir) en el README.md. 
+    3) Nombre completo y rut.
+
+
+...::: Instrucciones :::...
+
+[Ok] 1) (5%) Utilización correcta de las carpetas (poseer carpeta components, screen, routes, etc)
+[--] 2) (20%) context a elección de ustedes. Se pide 2 context en caso de usar context. 
+[--] 3) (10%) Debe implementar navegación con React Navigation y navegar entre screens. 
+[--] 4) (5%) Debe tener un login falso (credenciales en el README del proyecto. al apretar el botón atrás, no debe regresar al login. 
+[--] 5) (10%) Deben haber 2 componentes de clase y 4 componentes funcionales.
+[--] 6) (5%) Debe implementar screens con componentes que muestren información que ustedes consideren relevante
+[--] 7) (5%) Screen tipo perfil en donde se pueda mostrar y cambiar los datos personales. (Nombre, Correo, número de teléfono) 
+[--] 8) (10%) Los datos del perfil deben persistir
+[--] 9) (20%) Se debe utilizar ES6+ (string literales, arrow functions, spread operator, desestructuración, async/await, etc). 
+[--] 10) (10%) Diseño de los componentes, aplicar uso de flex y Stylesheet.
+
+[--] 11) BONUS (10% extra) (puede ser alguno de los dos a continuación): 
+    a) Agregar el módulo nativo para sacar foto 
+    (https://github.com/react-native-camera/react-native-camera)
+
+    b) Agregar módulo nativo para seleccionar alguna foto de la librería del dispositivo 
+    (https://github.com/react-native-image-picker/react-native-image-picker) Total con bonus: 110% 
+
+
+
