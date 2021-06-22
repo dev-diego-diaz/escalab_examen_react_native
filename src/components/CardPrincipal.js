@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardPrincipal = () => {
+const CardPrincipal = ({ nombre }) => {
   return (
     <View style={styles.content}>
       {/* Imagen principal */}
@@ -42,7 +42,9 @@ const CardPrincipal = () => {
           <TouchableHighlight onPress={() => {}}>
             <View style={styles.buttomControls}>
               <Icon style={{ fontSize: 30 }} name="add" color="#ecf0f1" />
-              <Text style={{ fontSize: 17, color: "#ecf0f1" }}>Mi lista</Text>
+              <Text style={{ fontSize: 17, color: "#ecf0f1" }}>
+                Mis {nombre}
+              </Text>
             </View>
           </TouchableHighlight>
 

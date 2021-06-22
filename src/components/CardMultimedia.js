@@ -1,9 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
 
 const styles = StyleSheet.create({
+  content: {
+    width: 130,
+    marginHorizontal: 15,
+    marginVertical: 15,
+  },
   img: {
     backgroundColor: "#b2bec3",
     borderRadius: 10,
@@ -35,11 +40,10 @@ const styles = StyleSheet.create({
 
 const CardMultimedia = () => {
   return (
-    <View style={{ width: 130, marginHorizontal: 15 }}>
-      <View
-        style={styles.img}
-        onPress={() => navigation.navigate("actores")}
-      ></View>
+    <View style={styles.content}>
+      <TouchableOpacity onPress={() => navigation.navigate("actores")}>
+        <View style={styles.img}></View>
+      </TouchableOpacity>
       <View style={styles.starContent}>
         <Icon.Button
           style={styles.star}

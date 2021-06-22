@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LoginStack from "./LoginStack";
 import DrawerStack from "./DrawerStack";
+import Detail from "../screen/Common/Detail";
 
 const RootStack = createStackNavigator();
 const isLogin = true;
@@ -14,6 +15,7 @@ const RootNavigation = () => (
       {isLogin ? (
         <RootStack.Screen name="MenuLateral" component={DrawerStack} />
       ) : (
+        // <RootStack.Screen name="MenuLateral" component={Detail} />
         <RootStack.Screen name="LoginNavigator" component={LoginStack} />
       )}
     </RootStack.Navigator>

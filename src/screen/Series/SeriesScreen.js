@@ -1,11 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView } from "react-native";
+import CardSlider from "../../components/CardSlider";
+import CardPrincipal from "../../components/CardPrincipal";
 
 const SeriesScreen = () => {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ fontSize: 35 }}> Series </Text>
-    </View>
+    <ScrollView vertical showsVerticalScrollIndicator={false}>
+      <CardPrincipal nombre={"series"} />
+      <CardSlider key={1} titulo={"Titulo para sección 1"} />
+      <CardSlider key={2} titulo={"Titulo para sección 2"} />
+      <CardSlider key={3} titulo={"Titulo para sección 2"} />
+    </ScrollView>
   );
 };
 
