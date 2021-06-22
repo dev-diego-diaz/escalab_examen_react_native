@@ -36,7 +36,10 @@ const styles = StyleSheet.create({
 const CardMultimedia = () => {
   return (
     <View style={{ width: 130, marginHorizontal: 15 }}>
-      <View style={styles.img}></View>
+      <View
+        style={styles.img}
+        onPress={() => navigation.navigate("actores")}
+      ></View>
       <View style={styles.starContent}>
         <Icon.Button
           style={styles.star}

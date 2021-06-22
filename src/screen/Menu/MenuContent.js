@@ -5,7 +5,9 @@ import Icon from "react-native-vector-icons/Entypo";
 import colors from "../../config/colors";
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+  },
   boton: {
     marginVertical: 15,
     marginHorizontal: 15,
@@ -32,6 +34,10 @@ const styles = StyleSheet.create({
     alignContent: "center",
     width: "100%",
   },
+  botonSalir: {
+    position: "absolute",
+    bottom: 2,
+  },
 });
 
 const MenuContent = ({ navigation }) => {
@@ -56,13 +62,6 @@ const MenuContent = ({ navigation }) => {
         </View>
       </TouchableOpacity>
 
-      <Button
-        onPress={() => {}}
-        style={{ marginBottom: 30 }}
-        title="Salir"
-        color="#74b9ff"
-      />
-
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.boton}
@@ -85,6 +84,13 @@ const MenuContent = ({ navigation }) => {
           <Text>Ranking de Actores</Text>
         </TouchableOpacity>
       </View>
+
+      <Button
+        onPress={() => {}}
+        style={styles.botonSalir}
+        title="Salir"
+        color="#74b9ff"
+      />
     </>
   );
 };
