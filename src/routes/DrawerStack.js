@@ -11,8 +11,8 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => (
   <Drawer.Navigator drawerContent={MenuContent}>
-    <Drawer.Screen name="perfil" component={UserScreen} />
     <Drawer.Screen name="peliculas" component={MoviesScreen} />
+    <Drawer.Screen name="perfil" component={UserScreen} />
     <Drawer.Screen name="series" component={SeriesScreen} />
     <Drawer.Screen name="actores" component={ActorsScreen} />
   </Drawer.Navigator>
