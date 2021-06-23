@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableHighlight,
+  Image,
+} from "react-native";
+
+import { urlImagen } from "../config/constant";
 
 import Icon from "react-native-vector-icons/MaterialIcons";
 
@@ -7,7 +15,7 @@ const styles = StyleSheet.create({
   content: {
     position: "relative",
   },
-  image: {
+  imageContent: {
     width: "100%",
     height: 350,
     backgroundColor: "#bdc3c7",
@@ -30,11 +38,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardPrincipal = ({ nombre }) => {
+const CardPrincipal = ({ nombre, data: { poster_path } }) => {
+  // const poster_movie = `${urlImagen}${poster_path}`;
+
   return (
     <View style={styles.content}>
       {/* Imagen principal */}
-      <View style={styles.image}></View>
+      <View style={styles.imageContent}>
+        <Image
+          source={{ uri: `${urlImagen}${poster_path}` }}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </View>
 
       {/* Controles */}
       <View style={styles.contentControlsWrap}>

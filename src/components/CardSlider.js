@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { FlatList } from "react-native-gesture-handler";
 import CardMultimedia from "./CardMultimedia";
 
 const styles = StyleSheet.create({
@@ -18,26 +19,23 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardSlider = ({ titulo }) => {
+const CardSlider = ({ titulo, data }) => {
   return (
     <View>
       <Text style={styles.titulo}>{titulo}</Text>
-      <ScrollView
-        style={styles.content}
+      <FlatList
+        data={data}
+        renderItem={({ item: { poster_path, title, vote_average } }) => (
+          <CardMultimedia
+            imagen={poster_path}
+            title={title}
+            votes={vote_average}
+            keyExtractor={(item) => item.id}
+          />
+        )}
         horizontal
         showsHorizontalScrollIndicator={false}
-      >
-        <CardMultimedia key={1} />
-        <CardMultimedia key={2} />
-        <CardMultimedia key={3} />
-        <CardMultimedia key={4} />
-        <CardMultimedia key={5} />
-        <CardMultimedia key={6} />
-        <CardMultimedia key={7} />
-        <CardMultimedia key={8} />
-        <CardMultimedia key={9} />
-        <CardMultimedia key={10} />
-      </ScrollView>
+      />
     </View>
   );
 };

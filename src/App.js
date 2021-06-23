@@ -9,14 +9,14 @@
 import "react-native-gesture-handler";
 import React from "react";
 import RootNavigation from "./routes/root";
-
-import MenuContent from "./screen/Menu/MenuContent";
+import Movies from "./contexts/MoviesContextProvider";
 
 const App = () => {
   return (
     <>
-      <RootNavigation />
-      {/* <MenuContent /> */}
+      <Movies>
+        <RootNavigation />
+      </Movies>
     </>
   );
 };

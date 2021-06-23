@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { urlImagen } from "../config/constant";
 
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -38,51 +39,35 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardMultimedia = () => {
+const goldColor = "#f1c40f";
+const grayColor = "#95a6a6";
+
+const CardMultimedia = ({ imagen, title, votes }) => {
+  const votesStar = Math.round((votes * 5) / 10);
+
+  const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
+    <Icon
+      name="star"
+      size={13}
+      backgroundColor="transparent"
+      color={index < votesStar ? goldColor : grayColor}
+      key={index}
+    />
+  ));
+
   return (
     <View style={styles.content}>
       <TouchableOpacity onPress={() => navigation.navigate("actores")}>
-        <View style={styles.img}></View>
+        <View style={styles.img}>
+          <Image
+            source={{ uri: `${urlImagen}${imagen}` }}
+            style={{ width: 130, height: 180 }}
+          />
+        </View>
       </TouchableOpacity>
-      <View style={styles.starContent}>
-        <Icon.Button
-          style={styles.star}
-          name="star"
-          backgroundColor="transparent"
-          color="#fdcb6e"
-          size={13}
-        />
-        <Icon.Button
-          style={styles.star}
-          name="star"
-          backgroundColor="transparent"
-          color="#fdcb6e"
-          size={13}
-        />
-        <Icon.Button
-          style={styles.star}
-          name="star"
-          backgroundColor="transparent"
-          color="#fdcb6e"
-          size={13}
-        />
-        <Icon.Button
-          style={styles.star}
-          name="star"
-          backgroundColor="transparent"
-          color="#bdc3c7"
-          size={13}
-        />
-        <Icon.Button
-          style={styles.star}
-          name="star"
-          backgroundColor="transparent"
-          color="#bdc3c7"
-          size={13}
-        />
-      </View>
+      <View style={styles.starContent}>{starTotalNumber}</View>
       <View style={styles.textContent}>
-        <Text style={styles.textTitle}>Nombre pelicula</Text>
+        <Text style={styles.textTitle}>{title}</Text>
       </View>
     </View>
   );
