@@ -10,12 +10,18 @@ import "react-native-gesture-handler";
 import React from "react";
 import RootNavigation from "./routes/root";
 import Movies from "./contexts/MoviesContextProvider";
+import Series from "./contexts/SeriesContextProvider";
+import Actors from "./contexts/ActorsContextProvider";
 
 const App = () => {
   return (
     <>
       <Movies>
-        <RootNavigation />
+        <Series>
+          <Actors>
+            <RootNavigation />
+          </Actors>
+        </Series>
       </Movies>
     </>
   );

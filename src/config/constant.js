@@ -25,7 +25,7 @@ export const movie_comming = () =>
 
 // Información de la pelicula
 export const infoFilm = (id_movie) =>
-  `${url_base}/movie/${id_movie}/credits?api_key=${api_key}&&${idioma}`;
+  `${url_base}/movie/${id_movie}/credits?api_key=${api_key}&${idioma}`;
 
 // ##########################################################################
 
@@ -41,7 +41,7 @@ export const inAir = () =>
 
 // Tops
 export const topSerie = () =>
-  `${url_base}/top_rated?api_key=${api_key}&${idioma}`;
+  `${url_base}/tv/top_rated?api_key=${api_key}&${idioma}`;
 
 export const infoSerie = (id_serie) =>
   `${url_base}/tv/${id_serie}/credits?api_key=${api_key}&&${idioma}`;
@@ -50,12 +50,12 @@ export const infoSerie = (id_serie) =>
 
 // ############################ Actores ####################################
 export const topActors = () =>
-  `${url_base}/trending/person/week?api_key=${api_key}&&${idioma}`;
+  `${url_base}/trending/person/week?api_key=${api_key}&${idioma}`;
 
 export const detailActor = (id_persona) =>
-  `${url_base}/person/${id_persona}?api_key=${api_key}&&${idioma}`;
+  `${url_base}/person/${id_persona}?api_key=${api_key}&${idioma}`;
 
 export const filmActor = (id_persona) =>
-  `${url_base}/person/${id_persona}/movie_credits?api_key=${api_key}&&${idioma}`;
+  `${url_base}/person/${id_persona}/movie_credits?api_key=${api_key}&${idioma}`;
 
 // #########################################################################

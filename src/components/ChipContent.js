@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { urlImagen } from "../config/constant";
+
+import * as RootNavigation from "../routes/RootNavigation";
 
 const styles = StyleSheet.create({
   content: {
     height: 50,
-    width: 150,
     borderColor: "#535c68",
     borderWidth: 1,
     borderRadius: 50,
@@ -26,13 +28,24 @@ const styles = StyleSheet.create({
   },
 });
 
-const ChipContent = () => {
+const ChipContent = ({ id, name, avatar, url }) => {
   return (
-    <TouchableOpacity onPress={() => {}}>
+    <TouchableOpacity
+      onPress={() =>
+        url
+          ? RootNavigation.navigate("detalleActor", { id, name, avatar })
+          : () => {}
+      }
+    >
       <View style={styles.content}>
-        <View style={styles.avatar}></View>
+        <View style={styles.avatar}>
+          <Image
+            source={{ uri: `${urlImagen}${avatar}` }}
+            style={{ width: 50, height: 50, borderRadius: 100 }}
+          />
+        </View>
         <View style={styles.text}>
-          <Text>Hooola chips</Text>
+          <Text style={{ paddingLeft: 5 }}>{name}</Text>
         </View>
       </View>
     </TouchableOpacity>

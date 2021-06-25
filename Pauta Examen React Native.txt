@@ -15,7 +15,7 @@
 ...::: Instrucciones :::...
 
 [Ok] 1) (5%) Utilización correcta de las carpetas (poseer carpeta components, screen, routes, etc)
-[--] 2) (20%) context a elección de ustedes. Se pide 2 context en caso de usar context. 
+[Ok] 2) (20%) context a elección de ustedes. Se pide 2 context en caso de usar context. 
 [Ok] 3) (10%) Debe implementar navegación con React Navigation y navegar entre screens. 
 [//] 4) (5%) Debe tener un login falso (credenciales en el README del proyecto. al apretar el botón atrás, no debe regresar al login. 
 [//] 5) (10%) Deben haber 2 componentes de clase y 4 componentes funcionales.

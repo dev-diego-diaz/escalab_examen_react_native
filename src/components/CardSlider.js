@@ -19,17 +19,34 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardSlider = ({ titulo, data }) => {
+const CardSlider = ({ titulo, data, tipo }) => {
   return (
     <View>
       <Text style={styles.titulo}>{titulo}</Text>
       <FlatList
         data={data}
-        renderItem={({ item: { poster_path, title, vote_average } }) => (
+        renderItem={({
+          item: {
+            id,
+            backdrop_path,
+            poster_path,
+            title,
+            name,
+            overview,
+            release_date,
+            first_air_date,
+            vote_average,
+          },
+        }) => (
           <CardMultimedia
+            id={id}
+            background_imagen={backdrop_path}
             imagen={poster_path}
-            title={title}
+            title={title ? title : name}
+            overview={overview}
+            release_date={release_date ? release_date : first_air_date}
             votes={vote_average}
+            tipo={tipo}
             keyExtractor={(item) => item.id}
           />
         )}

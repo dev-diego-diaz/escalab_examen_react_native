@@ -12,7 +12,7 @@ import {
 import { urlImagen } from "../../config/constant";
 import ChipContent from "../../components/ChipContent";
 
-import { MoviesContext } from "../../contexts/MoviesContextProvider";
+import { SeriesContext } from "../../contexts/SeriesContextProvider";
 
 const styles = StyleSheet.create({
   content: {
@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
 });
 
 const Detail = ({ route: { params } }) => {
-  const { getInfoFilm, dataInfoFilm } = useContext(MoviesContext);
+  const { getInfoSerie, dataInfoSerie } = useContext(SeriesContext);
   const { id, background_imagen, imagen, title, overview, release_date } =
     params;
 
   const Chips = (
     <FlatList
-      data={dataInfoFilm}
+      data={dataInfoSerie}
       renderItem={({ item: { id, name, profile_path } }) => (
         <ChipContent
           key={id}
@@ -87,7 +87,7 @@ const Detail = ({ route: { params } }) => {
   );
 
   useEffect(() => {
-    getInfoFilm(id);
+    getInfoSerie(id);
   }, [id]);
 
   return (

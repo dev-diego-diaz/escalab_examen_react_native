@@ -1,16 +1,16 @@
-import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import CardMultimedia from "../../components/CardMultimedia";
+import React, { useContext } from "react";
+import { View, Text, StyleSheet, FlatList } from "react-native";
+import CardPerson from "../../components/CardPerson";
+import { ActorsContext } from "../../contexts/ActorsContextProvider";
 
 const styles = StyleSheet.create({
   content: {
     flex: 1,
   },
-  viewScroll: {
+  flatStyle: {
     paddingTop: 15,
     paddingBottom: 50,
-    flexDirection: "row",
-    flexWrap: "wrap",
+    alignItems: "center",
     justifyContent: "center",
   },
   titulo: {
@@ -22,28 +22,27 @@ const styles = StyleSheet.create({
 });
 
 const ActorsScreen = () => {
+  const { dataTopActors } = useContext(ActorsContext);
+
   return (
     <View style={styles.content}>
-      <View>
-        <Text style={styles.titulo}>Rinking de actores</Text>
-        <ScrollView vertical>
-          <View style={styles.viewScroll}>
-            <CardMultimedia key={1} />
-            <CardMultimedia key={2} />
-            <CardMultimedia key={3} />
-            <CardMultimedia key={4} />
-            <CardMultimedia key={5} />
-            <CardMultimedia key={6} />
-            <CardMultimedia key={7} />
-            <CardMultimedia key={8} />
-            <CardMultimedia key={9} />
-            <CardMultimedia key={10} />
-            <CardMultimedia key={11} />
-            <CardMultimedia key={12} />
-            <CardMultimedia key={13} />
-            <CardMultimedia key={14} />
-          </View>
-        </ScrollView>
+      <Text style={styles.titulo}>Rinking de actores</Text>
+      <View style={styles.flatStyle}>
+        <FlatList
+          data={dataTopActors}
+          renderItem={({ item: { id, profile_path, name, popularity } }) => (
+            <CardPerson
+              imagen={profile_path}
+              name={name}
+              votes={popularity}
+              id={id}
+              keyExtractor={(item) => item.id}
+            />
+          )}
+          vertical
+          showsVerticalScrollIndicator={false}
+          numColumns={2}
+        />
       </View>
     </View>
   );

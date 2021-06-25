@@ -75,14 +75,16 @@ const MoviesContextProvider = ({ children }) => {
   const getInfoFilm = async (id_film) => {
     try {
       const {
-        data: { results },
+        data: { cast },
         status,
-      } = await axios.get(urlInfoFilm(id_film));
+      } = await axios.get(infoFilm(id_film));
 
       if (status == 200) {
-        setDataInfoFilm(results);
+        setDataInfoFilm(cast);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log("Error");
+    }
   };
 
   return (
@@ -92,6 +94,7 @@ const MoviesContextProvider = ({ children }) => {
         dataNowPlaying,
         dataUrlMovieClassic,
         dataMovieComming,
+        getInfoFilm,
         dataInfoFilm,
       }}
     >

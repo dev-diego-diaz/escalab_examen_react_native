@@ -16,12 +16,23 @@ const MoviesScreen = () => {
   return (
     <ScrollView vertical showsVerticalScrollIndicator={false}>
       <CardPrincipal nombre={"películas"} data={dataMoviePrincipal} />
-      <CardSlider key={1} titulo={"Continuar viendo"} data={dataNowPlaying} />
-      <CardSlider key={2} titulo={"Cine clasico"} data={dataUrlMovieClassic} />
+      <CardSlider
+        key={1}
+        titulo={"Continuar viendo"}
+        data={dataNowPlaying}
+        tipo={"Pelicula"}
+      />
+      <CardSlider
+        key={2}
+        titulo={"Cine clasico"}
+        data={dataUrlMovieClassic}
+        tipo={"Pelicula"}
+      />
       <CardSlider
         key={3}
         titulo={"Próximos estrenos"}
         data={dataMovieComming}
+        tipo={"Pelicula"}
       />
     </ScrollView>
   );

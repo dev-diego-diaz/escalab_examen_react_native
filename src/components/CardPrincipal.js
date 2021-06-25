@@ -39,8 +39,6 @@ const styles = StyleSheet.create({
 });
 
 const CardPrincipal = ({ nombre, data: { poster_path } }) => {
-  // const poster_movie = `${urlImagen}${poster_path}`;
-
   return (
     <View style={styles.content}>
       {/* Imagen principal */}

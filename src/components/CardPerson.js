@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { urlImagen } from "../config/constant";
-
 import * as RootNavigation from "../routes/RootNavigation";
+import { urlImagen } from "../config/constant";
 
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -44,17 +43,8 @@ const styles = StyleSheet.create({
 const goldColor = "#f1c40f";
 const grayColor = "#95a6a6";
 
-const CardMultimedia = ({
-  id,
-  background_imagen,
-  imagen,
-  title,
-  overview,
-  release_date,
-  votes,
-  tipo,
-}) => {
-  const votesStar = Math.round((votes * 5) / 10);
+const CardPerson = ({ id, imagen, name, votes }) => {
+  const votesStar = Math.round((votes * 5) / 100);
 
   const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
     <Icon
@@ -70,17 +60,7 @@ const CardMultimedia = ({
     <View style={styles.content}>
       <TouchableOpacity
         onPress={() =>
-          RootNavigation.navigate(
-            tipo == "Pelicula" ? "detalle" : "detalleSerie",
-            {
-              id,
-              background_imagen,
-              imagen,
-              title,
-              overview,
-              release_date,
-            }
-          )
+          RootNavigation.navigate("detalleActor", { id, name, avatar: imagen })
         }
       >
         <View style={styles.img}>
@@ -92,10 +72,10 @@ const CardMultimedia = ({
       </TouchableOpacity>
       <View style={styles.starContent}>{starTotalNumber}</View>
       <View style={styles.textContent}>
-        <Text style={styles.textTitle}>{title}</Text>
+        <Text style={styles.textTitle}>{name}</Text>
       </View>
     </View>
   );
 };
 
-export default CardMultimedia;
+export default CardPerson;
