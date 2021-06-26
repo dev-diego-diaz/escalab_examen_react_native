@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import * as RootNavigation from "../routes/RootNavigation";
 import { urlImagen } from "../config/constant";
@@ -42,40 +42,47 @@ const styles = StyleSheet.create({
 
 const goldColor = "#f1c40f";
 const grayColor = "#95a6a6";
+export class CardPerson extends Component {
+  render() {
+    const { id, imagen, name, votes } = this.props;
 
-const CardPerson = ({ id, imagen, name, votes }) => {
-  const votesStar = Math.round((votes * 5) / 100);
+    const votesStar = Math.round((votes * 5) / 100);
 
-  const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
-    <Icon
-      name="star"
-      size={13}
-      backgroundColor="transparent"
-      color={index < votesStar ? goldColor : grayColor}
-      key={index}
-    />
-  ));
+    const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
+      <Icon
+        name="star"
+        size={13}
+        backgroundColor="transparent"
+        color={index < votesStar ? goldColor : grayColor}
+        key={index}
+      />
+    ));
 
-  return (
-    <View style={styles.content}>
-      <TouchableOpacity
-        onPress={() =>
-          RootNavigation.navigate("detalleActor", { id, name, avatar: imagen })
-        }
-      >
-        <View style={styles.img}>
-          <Image
-            source={{ uri: `${urlImagen}${imagen}` }}
-            style={{ width: 130, height: 180 }}
-          />
+    return (
+      <View style={styles.content}>
+        <TouchableOpacity
+          onPress={() =>
+            RootNavigation.navigate("detalleActor", {
+              id,
+              name,
+              avatar: imagen,
+            })
+          }
+        >
+          <View style={styles.img}>
+            <Image
+              source={{ uri: `${urlImagen}${imagen}` }}
+              style={{ width: 130, height: 180 }}
+            />
+          </View>
+        </TouchableOpacity>
+        <View style={styles.starContent}>{starTotalNumber}</View>
+        <View style={styles.textContent}>
+          <Text style={styles.textTitle}>{name}</Text>
         </View>
-      </TouchableOpacity>
-      <View style={styles.starContent}>{starTotalNumber}</View>
-      <View style={styles.textContent}>
-        <Text style={styles.textTitle}>{name}</Text>
       </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 export default CardPerson;

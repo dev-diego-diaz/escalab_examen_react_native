@@ -1,6 +1,6 @@
-// import { useNavigation } from "@react-navigation/core";
 import React from "react";
 import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+import * as RootNavigation from "../../routes/RootNavigation";
 import Icon from "react-native-vector-icons/Entypo";
 import colors from "../../config/colors";
 
@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const MenuContent = ({ navigation }) => {
+const MenuContent = () => {
   return (
     <>
-      <TouchableOpacity onPress={() => navigation.navigate("perfil")}>
+      <TouchableOpacity onPress={() => RootNavigation.navigate("perfil")}>
         <View style={styles.avatarContainer}>
           <View style={styles.avatarImg}>
             <Icon name="user" size={95} />
@@ -65,21 +65,21 @@ const MenuContent = ({ navigation }) => {
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.boton}
-          onPress={() => navigation.navigate("peliculas")}
+          onPress={() => RootNavigation.navigate("peliculas")}
         >
           <Text>Películas</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.boton}
-          onPress={() => navigation.navigate("series")}
+          onPress={() => RootNavigation.navigate("series")}
         >
           <Text>Series</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.boton}
-          onPress={() => navigation.navigate("actores")}
+          onPress={() => RootNavigation.navigate("actores")}
         >
           <Text>Ranking de Actores</Text>
         </TouchableOpacity>

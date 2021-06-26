@@ -12,6 +12,7 @@ import RootNavigation from "./routes/root";
 import Movies from "./contexts/MoviesContextProvider";
 import Series from "./contexts/SeriesContextProvider";
 import Actors from "./contexts/ActorsContextProvider";
+import Login from "./contexts/LoginContextProvider";
 
 const App = () => {
   return (
@@ -19,7 +20,9 @@ const App = () => {
       <Movies>
         <Series>
           <Actors>
-            <RootNavigation />
+            <Login>
+              <RootNavigation />
+            </Login>
           </Actors>
         </Series>
       </Movies>

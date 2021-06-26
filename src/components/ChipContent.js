@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { urlImagen } from "../config/constant";
 
@@ -28,28 +28,32 @@ const styles = StyleSheet.create({
   },
 });
 
-const ChipContent = ({ id, name, avatar, url }) => {
-  return (
-    <TouchableOpacity
-      onPress={() =>
-        url
-          ? RootNavigation.navigate("detalleActor", { id, name, avatar })
-          : () => {}
-      }
-    >
-      <View style={styles.content}>
-        <View style={styles.avatar}>
-          <Image
-            source={{ uri: `${urlImagen}${avatar}` }}
-            style={{ width: 50, height: 50, borderRadius: 100 }}
-          />
+class ChipContent extends Component {
+  render() {
+    const { id, name, avatar, url } = this.props;
+
+    return (
+      <TouchableOpacity
+        onPress={() =>
+          url
+            ? RootNavigation.navigate("detalleActor", { id, name, avatar })
+            : () => {}
+        }
+      >
+        <View style={styles.content}>
+          <View style={styles.avatar}>
+            <Image
+              source={{ uri: `${urlImagen}${avatar}` }}
+              style={{ width: 50, height: 50, borderRadius: 100 }}
+            />
+          </View>
+          <View style={styles.text}>
+            <Text style={{ paddingLeft: 5 }}>{name}</Text>
+          </View>
         </View>
-        <View style={styles.text}>
-          <Text style={{ paddingLeft: 5 }}>{name}</Text>
-        </View>
-      </View>
-    </TouchableOpacity>
-  );
-};
+      </TouchableOpacity>
+    );
+  }
+}
 
 export default ChipContent;

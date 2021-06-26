@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   View,
   Text,
@@ -38,43 +38,52 @@ const styles = StyleSheet.create({
   },
 });
 
-const CardPrincipal = ({ nombre, data: { poster_path } }) => {
-  return (
-    <View style={styles.content}>
-      {/* Imagen principal */}
-      <View style={styles.imageContent}>
-        <Image
-          source={{ uri: `${urlImagen}${poster_path}` }}
-          style={{ width: "100%", height: "100%" }}
-        />
-      </View>
+export class CardPrincipal extends Component {
+  render() {
+    const {
+      nombre,
+      data: { poster_path },
+    } = this.props;
 
-      {/* Controles */}
-      <View style={styles.contentControlsWrap}>
-        <View style={styles.contentControls}>
-          <TouchableHighlight onPress={() => {}}>
-            <View style={styles.buttomControls}>
-              <Icon style={{ fontSize: 30 }} name="add" color="#ecf0f1" />
-              <Text style={{ fontSize: 17, color: "#ecf0f1" }}>
-                Mis {nombre}
-              </Text>
-            </View>
-          </TouchableHighlight>
+    return (
+      <View style={styles.content}>
+        {/* Imagen principal */}
+        <View style={styles.imageContent}>
+          <Image
+            source={{ uri: `${urlImagen}${poster_path}` }}
+            style={{ width: "100%", height: "100%" }}
+          />
+        </View>
 
-          <TouchableHighlight onPress={() => {}}>
-            <View style={styles.buttomControls}>
-              <Icon
-                style={{ fontSize: 30 }}
-                name="play-arrow"
-                color="#ecf0f1"
-              />
-              <Text style={{ fontSize: 17, color: "#ecf0f1" }}>Reproducir</Text>
-            </View>
-          </TouchableHighlight>
+        {/* Controles */}
+        <View style={styles.contentControlsWrap}>
+          <View style={styles.contentControls}>
+            <TouchableHighlight onPress={() => {}}>
+              <View style={styles.buttomControls}>
+                <Icon style={{ fontSize: 30 }} name="add" color="#ecf0f1" />
+                <Text style={{ fontSize: 17, color: "#ecf0f1" }}>
+                  Mis {nombre}
+                </Text>
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight onPress={() => {}}>
+              <View style={styles.buttomControls}>
+                <Icon
+                  style={{ fontSize: 30 }}
+                  name="play-arrow"
+                  color="#ecf0f1"
+                />
+                <Text style={{ fontSize: 17, color: "#ecf0f1" }}>
+                  Reproducir
+                </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 export default CardPrincipal;

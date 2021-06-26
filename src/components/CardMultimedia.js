@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { urlImagen } from "../config/constant";
 
@@ -44,58 +45,62 @@ const styles = StyleSheet.create({
 const goldColor = "#f1c40f";
 const grayColor = "#95a6a6";
 
-const CardMultimedia = ({
-  id,
-  background_imagen,
-  imagen,
-  title,
-  overview,
-  release_date,
-  votes,
-  tipo,
-}) => {
-  const votesStar = Math.round((votes * 5) / 10);
+export class CardMultimedia extends Component {
+  render() {
+    const {
+      id,
+      background_imagen,
+      imagen,
+      title,
+      overview,
+      release_date,
+      votes,
+      tipo,
+    } = this.props;
 
-  const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
-    <Icon
-      name="star"
-      size={13}
-      backgroundColor="transparent"
-      color={index < votesStar ? goldColor : grayColor}
-      key={index}
-    />
-  ));
+    const votesStar = Math.round((votes * 5) / 10);
 
-  return (
-    <View style={styles.content}>
-      <TouchableOpacity
-        onPress={() =>
-          RootNavigation.navigate(
-            tipo == "Pelicula" ? "detalle" : "detalleSerie",
-            {
-              id,
-              background_imagen,
-              imagen,
-              title,
-              overview,
-              release_date,
-            }
-          )
-        }
-      >
-        <View style={styles.img}>
-          <Image
-            source={{ uri: `${urlImagen}${imagen}` }}
-            style={{ width: 130, height: 180 }}
-          />
+    const starTotalNumber = Array.from({ length: 5 }).map((_, index) => (
+      <Icon
+        name="star"
+        size={13}
+        backgroundColor="transparent"
+        color={index < votesStar ? goldColor : grayColor}
+        key={index}
+      />
+    ));
+
+    return (
+      <View style={styles.content}>
+        <TouchableOpacity
+          onPress={() =>
+            RootNavigation.navigate(
+              tipo == "Pelicula" ? "detalle" : "detalleSerie",
+              {
+                id,
+                background_imagen,
+                imagen,
+                title,
+                overview,
+                release_date,
+              }
+            )
+          }
+        >
+          <View style={styles.img}>
+            <Image
+              source={{ uri: `${urlImagen}${imagen}` }}
+              style={{ width: 130, height: 180 }}
+            />
+          </View>
+        </TouchableOpacity>
+        <View style={styles.starContent}>{starTotalNumber}</View>
+        <View style={styles.textContent}>
+          <Text style={styles.textTitle}>{title}</Text>
         </View>
-      </TouchableOpacity>
-      <View style={styles.starContent}>{starTotalNumber}</View>
-      <View style={styles.textContent}>
-        <Text style={styles.textTitle}>{title}</Text>
       </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 export default CardMultimedia;
