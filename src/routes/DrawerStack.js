@@ -12,16 +12,18 @@ import DetailActor from "../screen/Common/DetailActor";
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => (
-  <Drawer.Navigator drawerContent={MenuContent}>
-    <Drawer.Screen name="peliculas" component={MoviesScreen} />
-    <Drawer.Screen name="perfil" component={UserScreen} />
-    <Drawer.Screen name="series" component={SeriesScreen} />
-    <Drawer.Screen name="actores" component={ActorsScreen} />
-    <Drawer.Screen name="detalle" component={Detail} />
-    <Drawer.Screen name="detalleSerie" component={DetailSerie} />
-    <Drawer.Screen name="detalleActor" component={DetailActor} />
-  </Drawer.Navigator>
-);
+const DrawerNavigator = () => {
+  return (
+    <Drawer.Navigator drawerContent={MenuContent}>
+      <Drawer.Screen name="peliculas" component={MoviesScreen} />
+      <Drawer.Screen name="perfil" component={UserScreen} />
+      <Drawer.Screen name="series" component={SeriesScreen} />
+      <Drawer.Screen name="actores" component={ActorsScreen} />
+      <Drawer.Screen name="detalle" component={Detail} />
+      <Drawer.Screen name="detalleSerie" component={DetailSerie} />
+      <Drawer.Screen name="detalleActor" component={DetailActor} />
+    </Drawer.Navigator>
+  );
+};
 
 export default DrawerNavigator;

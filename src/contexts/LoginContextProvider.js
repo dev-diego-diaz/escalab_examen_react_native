@@ -20,6 +20,8 @@ const userReducer = (state, action) => {
       } else {
         return {
           ...state,
+          name: "",
+          lastName: "",
           email: "",
           password: "",
           loginActive: false,
@@ -30,14 +32,10 @@ const userReducer = (state, action) => {
     case "LOG_OUT": {
       return {
         ...state,
-        email: "",
-        password: "",
         loginActive: false,
-        errorLogin: false,
       };
     }
     case "UPDATE_USER": {
-      console.log(action.payload);
       RootNavigation.navigate("peliculas");
       return {
         ...state,
