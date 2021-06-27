@@ -57,15 +57,22 @@ const styles = StyleSheet.create({
 const UserScreen = () => {
   const { store, dispatch } = useContext(LoginUserContext);
 
-  const { email, name, lastName } = store;
+  const { email, name, lastName, phone } = store;
 
   const [newName, setNewName] = useState(name);
   const [newLastName, setNewLastName] = useState(lastName);
+  const [newEmail, setNewEmail] = useState(email);
+  const [newPhone, setNewPhone] = useState(phone);
 
   const enviarFormulario = () => {
     dispatch({
       type: "UPDATE_USER",
-      payload: { name: newName, lastName: newLastName },
+      payload: {
+        name: newName,
+        lastName: newLastName,
+        email: newEmail,
+        phone: newPhone,
+      },
     });
   };
 
@@ -116,10 +123,22 @@ const UserScreen = () => {
         <View>
           <Text>Email</Text>
           <TextInput
-            editable={false}
+            autoCapitalize={"none"}
+            keyboardType={"email-address"}
+            style={styles.textInput}
+            value={newEmail}
+            onChangeText={(_email) => setNewEmail(_email)}
+          />
+        </View>
+
+        {/* Email */}
+        <View>
+          <Text>Numero telefónico</Text>
+          <TextInput
             autoCapitalize={"none"}
             style={styles.textInput}
-            value={email}
+            value={newPhone}
+            onChangeText={(_phone) => setNewPhone(_phone)}
           />
         </View>
 

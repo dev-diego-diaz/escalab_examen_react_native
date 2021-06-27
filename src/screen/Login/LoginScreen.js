@@ -50,12 +50,15 @@ const styles = StyleSheet.create({
 
 const LoginScreen = () => {
   // Hooks
-  const [email, setEmail] = useState("");
+  const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
 
   // Formulario de envio
   const enviarFormulario = () => {
-    dispatch({ type: "LOG_IN", payload: { email: email, password: password } });
+    dispatch({
+      type: "LOG_IN",
+      payload: { nickname: nickname, password: password },
+    });
   };
 
   // Contexto
@@ -75,13 +78,12 @@ const LoginScreen = () => {
       </View>
       <View style={styles.body}>
         <View>
-          <Text>Email</Text>
+          <Text>Nickname</Text>
           <TextInput
             autoCapitalize={"none"}
-            keyboardType={"email-address"}
             style={styles.textInput}
-            value={email}
-            onChangeText={(_email) => setEmail(_email)}
+            value={nickname}
+            onChangeText={(_nickname) => setNickname(_nickname)}
           />
         </View>
         <View>
@@ -106,7 +108,7 @@ const LoginScreen = () => {
         </View>
         {/* Mensaje error */}
         <View>
-          <Text>{errorLogin ? "Usuario o contraseña invalido" : ""}</Text>
+          <Text>{errorLogin ? "Nickname o contraseña invalido" : ""}</Text>
         </View>
       </View>
     </View>

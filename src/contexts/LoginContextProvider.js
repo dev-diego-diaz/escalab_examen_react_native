@@ -7,12 +7,14 @@ export const LoginUserContext = createContext();
 const userReducer = (state, action) => {
   switch (action.type) {
     case "LOG_IN": {
-      if (action.payload.email === "a" && action.payload.password === "1") {
+      if (action.payload.nickname === "a" && action.payload.password === "1") {
         return {
           ...state,
+          nickname: action.payload.nickname,
           name: "",
           lastName: "",
-          email: action.payload.email,
+          email: "",
+          phone: "",
           password: action.payload.password,
           loginActive: true,
           errorLogin: false,
@@ -20,9 +22,11 @@ const userReducer = (state, action) => {
       } else {
         return {
           ...state,
+          nickname: "",
           name: "",
           lastName: "",
           email: "",
+          phone: "",
           password: "",
           loginActive: false,
           errorLogin: true,
@@ -41,6 +45,8 @@ const userReducer = (state, action) => {
         ...state,
         name: action.payload.name,
         lastName: action.payload.lastName,
+        email: action.payload.email,
+        phone: action.payload.phone,
       };
     }
     default:
@@ -49,9 +55,11 @@ const userReducer = (state, action) => {
 };
 
 const defaultState = {
+  nickname: "",
   name: "",
   lastName: "",
   email: "",
+  phone: "",
   password: "",
   loginActive: false,
   errorLogin: false,

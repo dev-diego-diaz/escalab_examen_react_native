@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 const MenuHeader = () => {
   const { store } = useContext(LoginUserContext);
-  const { name, lastName, email } = store;
+  const { name, lastName, email, phone } = store;
 
   let fullName = "";
 
@@ -48,7 +48,12 @@ const MenuHeader = () => {
           <Text style={{ fontSize: 21, textAlign: "center", marginBottom: 5 }}>
             {fullName}
           </Text>
-          <Text style={{ fontSize: 13, textAlign: "center" }}>{email}</Text>
+          <Text style={{ fontSize: 13, textAlign: "center" }}>
+            {email != "" ? email : "Sin email"}
+          </Text>
+          <Text style={{ fontSize: 11, textAlign: "center" }}>
+            {phone != "" ? "Cel: " + phone : ""}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>
