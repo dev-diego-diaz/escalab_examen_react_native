@@ -20,8 +20,8 @@
 [Ok] 4) (5%) Debe tener un login falso (credenciales en el README del proyecto. al apretar el botón atrás, no debe regresar al login. 
 [Ok] 5) (10%) Deben haber 2 componentes de clase y 4 componentes funcionales.
 [Ok] 6) (5%) Debe implementar screens con componentes que muestren información que ustedes consideren relevante
-[//] 7) (5%) Screen tipo perfil en donde se pueda mostrar y cambiar los datos personales. (Nombre, Correo, número de teléfono) 
-[--] 8) (10%) Los datos del perfil deben persistir
+[Ok] 7) (5%) Screen tipo perfil en donde se pueda mostrar y cambiar los datos personales. (Nombre, Correo, número de teléfono) 
+[Ok] 8) (10%) Los datos del perfil deben persistir
 [Ok] 9) (20%) Se debe utilizar ES6+ (string literales, arrow functions, spread operator, desestructuración, async/await, etc). 
 [Ok] 10) (10%) Diseño de los componentes, aplicar uso de flex y Stylesheet.
 

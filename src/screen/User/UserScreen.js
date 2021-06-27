@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icon from "react-native-vector-icons/Entypo";
 
 import { LoginUserContext } from "../../contexts/LoginContextProvider";
@@ -56,13 +57,30 @@ const styles = StyleSheet.create({
 
 const UserScreen = () => {
   const { store, dispatch } = useContext(LoginUserContext);
+  // const { email, name, lastName, phone } = store;
 
-  const { email, name, lastName, phone } = store;
+  const getInfoUser = async () => {
+    await AsyncStorage.getItem("user").then((data) => {
+      if (data !== null) {
+        let getDataAux = JSON.parse(data);
+        const { name, lastName, email, phone } = getDataAux;
 
-  const [newName, setNewName] = useState(name);
-  const [newLastName, setNewLastName] = useState(lastName);
-  const [newEmail, setNewEmail] = useState(email);
-  const [newPhone, setNewPhone] = useState(phone);
+        setNewName(name);
+        setNewLastName(lastName);
+        setNewEmail(email);
+        setNewPhone(phone);
+      }
+    });
+  };
+
+  useEffect(() => {
+    getInfoUser();
+  }, [store]);
+
+  const [newName, setNewName] = useState();
+  const [newLastName, setNewLastName] = useState();
+  const [newEmail, setNewEmail] = useState();
+  const [newPhone, setNewPhone] = useState();
 
   const enviarFormulario = () => {
     dispatch({

@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useState } from "react";
-
 import * as RootNavigation from "../routes/RootNavigation";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const LoginUserContext = createContext();
 
@@ -36,19 +36,43 @@ const userReducer = (state, action) => {
     case "LOG_OUT": {
       return {
         ...state,
+        nickname: "",
+        name: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        password: "",
         loginActive: false,
+        errorLogin: false,
       };
     }
+
     case "UPDATE_USER": {
-      RootNavigation.navigate("peliculas");
-      return {
+      AsyncStorage.removeItem("user");
+
+      AsyncStorage.setItem(
+        "user",
+        JSON.stringify({
+          name: action.payload.name,
+          lastName: action.payload.lastName,
+          email: action.payload.email,
+          phone: action.payload.phone,
+        })
+      );
+
+      const data = {
         ...state,
         name: action.payload.name,
         lastName: action.payload.lastName,
         email: action.payload.email,
         phone: action.payload.phone,
       };
+
+      RootNavigation.navigate("peliculas");
+
+      return data;
     }
+
     default:
       return state;
   }
