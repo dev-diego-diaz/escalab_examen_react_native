@@ -1,8 +1,8 @@
+// import React, { useContext } from "react";
 import React from "react";
 import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
 import * as RootNavigation from "../../routes/RootNavigation";
 import Icon from "react-native-vector-icons/Entypo";
-import colors from "../../config/colors";
 
 const styles = StyleSheet.create({
   container: {

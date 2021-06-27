@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   View,
   Text,
@@ -7,6 +7,8 @@ import {
   TextInput,
 } from "react-native";
 import Icon from "react-native-vector-icons/Entypo";
+
+import { LoginUserContext } from "../../contexts/LoginContextProvider";
 
 const styles = StyleSheet.create({
   content: {
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     backgroundColor: "#dfe6e9",
-    height: "30%",
+    height: "25%",
   },
   avatar: {
     flexDirection: "column",
@@ -53,13 +55,27 @@ const styles = StyleSheet.create({
 });
 
 const UserScreen = () => {
+  const { store, dispatch } = useContext(LoginUserContext);
+
+  const { email, name, lastName } = store;
+
+  const [newName, setNewName] = useState(name);
+  const [newLastName, setNewLastName] = useState(lastName);
+
+  const enviarFormulario = () => {
+    dispatch({
+      type: "UPDATE_USER",
+      payload: { name: newName, lastName: newLastName },
+    });
+  };
+
   return (
     <View style={styles.content}>
       {/* Cambiar fotográfica con camara */}
       <TouchableOpacity style={styles.avatarContent} onPress={() => {}}>
         <View>
           <View style={styles.avatar}>
-            <Icon name="user" size={150} />
+            <Icon name="user" size={100} />
             <View style={styles.icon}>
               <Icon name="camera" size={20} />
               <Text> Tomar un foto</Text>
@@ -73,24 +89,45 @@ const UserScreen = () => {
         <Text style={{ fontWeight: "bold", fontSize: 17, marginBottom: 25 }}>
           Datos personales
         </Text>
+
+        {/* Nombre */}
         <View>
           <Text>Nombre</Text>
-          <TextInput autoCapitalize={"none"} style={styles.textInput} />
+          <TextInput
+            autoCapitalize={"none"}
+            style={styles.textInput}
+            value={newName}
+            onChangeText={(_name) => setNewName(_name)}
+          />
         </View>
+
+        {/* Apellido */}
         <View>
           <Text>Apellido Paterno</Text>
-          <TextInput autoCapitalize={"none"} style={styles.textInput} />
+          <TextInput
+            autoCapitalize={"none"}
+            style={styles.textInput}
+            value={newLastName}
+            onChangeText={(_lastName) => setNewLastName(_lastName)}
+          />
         </View>
+
+        {/* Email */}
         <View>
           <Text>Email</Text>
           <TextInput
+            editable={false}
             autoCapitalize={"none"}
-            keyboardType={"email-address"}
             style={styles.textInput}
+            value={email}
           />
         </View>
+
         <View>
-          <TouchableOpacity style={styles.buttonContent}>
+          <TouchableOpacity
+            style={styles.buttonContent}
+            onPress={() => enviarFormulario()}
+          >
             <View style={{ flexDirection: "column", justifyContent: "center" }}>
               <Text style={styles.button}>Actualizar</Text>
             </View>

@@ -1,16 +1,17 @@
 import React, { createContext, useReducer, useState } from "react";
 
+import * as RootNavigation from "../routes/RootNavigation";
+
 export const LoginUserContext = createContext();
 
 const userReducer = (state, action) => {
   switch (action.type) {
     case "LOG_IN": {
-      if (
-        action.payload.email === "email@diego.cl" &&
-        action.payload.password === "12345"
-      ) {
+      if (action.payload.email === "a" && action.payload.password === "1") {
         return {
           ...state,
+          name: "",
+          lastName: "",
           email: action.payload.email,
           password: action.payload.password,
           loginActive: true,
@@ -19,8 +20,8 @@ const userReducer = (state, action) => {
       } else {
         return {
           ...state,
-          email: null,
-          password: null,
+          email: "",
+          password: "",
           loginActive: false,
           errorLogin: true,
         };
@@ -29,10 +30,19 @@ const userReducer = (state, action) => {
     case "LOG_OUT": {
       return {
         ...state,
-        email: null,
-        password: null,
+        email: "",
+        password: "",
         loginActive: false,
         errorLogin: false,
+      };
+    }
+    case "UPDATE_USER": {
+      console.log(action.payload);
+      RootNavigation.navigate("peliculas");
+      return {
+        ...state,
+        name: action.payload.name,
+        lastName: action.payload.lastName,
       };
     }
     default:
@@ -41,8 +51,10 @@ const userReducer = (state, action) => {
 };
 
 const defaultState = {
-  email: null,
-  password: null,
+  name: "",
+  lastName: "",
+  email: "",
+  password: "",
   loginActive: false,
   errorLogin: false,
 };
