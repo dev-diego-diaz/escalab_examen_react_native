@@ -24,10 +24,6 @@ La aplicación se divide en tres grupos:
 3.  Consumo de API:
     Para realizar la aplicación utilice la api https://www.themoviedb.org/?language=es de la cual consumí información relacionada a películas (Detalles de película selecciona), series (Detalles de la serie selecciona) y actores (Detalles del actor seleccionado)
 
-<br />
-<br />
-
-NOTA: A modo de observación al momento de tomar una fotográfia desde el emulador esta se demora un poco.
 <br/>
 <br/>
 Saludos y muchas gracias por todo lo enseñado en clases.
