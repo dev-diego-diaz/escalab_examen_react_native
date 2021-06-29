@@ -14,55 +14,156 @@
 12    <uses-permission android:name="android.permission.INTERNET" />
 12-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:4:5-67
 12-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:4:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.75.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.75.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
-14
-15    <application
-15-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:6:5-24:19
-16        android:name="com.escalab_examen_react_native.MainApplication"
-16-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:7:7-38
-17        android:allowBackup="false"
-17-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:11:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:9:7-41
-21        android:label="@string/app_name"
-21-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:10:7-52
-23        android:theme="@style/AppTheme"
-23-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:12:7-38
-24        android:usesCleartextTraffic="true" >
-24-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:8:9-44
-25        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-25-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:11:9-86
-25-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:11:19-83
-26        <activity
-26-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:13:7-23:18
-27            android:name="com.escalab_examen_react_native.MainActivity"
-27-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:14:9-37
-28            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-28-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:16:9-86
-29            android:label="@string/app_name"
-29-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:15:9-41
-30            android:launchMode="singleTask"
-30-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:17:9-40
-31            android:windowSoftInputMode="adjustResize" >
-31-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:18:9-51
-32            <intent-filter>
-32-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:19:9-22:25
-33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:20:13-65
-33-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:20:21-62
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:21:13-73
-35-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:21:23-70
-36            </intent-filter>
-37        </activity>
-38    </application>
-39
-40</manifest>
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:5:5-65
+13-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:5:22-62
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->[com.facebook.flipper:flipper:0.75.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+14-->[com.facebook.flipper:flipper:0.75.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+15
+16    <uses-feature
+16-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:11:5-13:36
+17        android:name="android.hardware.camera"
+17-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:12:9-47
+18        android:required="false" />
+18-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:13:9-33
+19    <uses-feature
+19-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:14:5-16:36
+20        android:name="android.hardware.camera.autofocus"
+20-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:15:9-57
+21        android:required="false" />
+21-->[:react-native-camera] /Users/diego/Desktop/escalab_examen_react_native/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:16:9-33
+22
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:22:5-79
+23-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:22:22-76
+24    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+24-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:24:5-68
+24-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:24:22-65
+25    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+25-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:26:5-82
+25-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:26:22-79
+26
+27    <application
+27-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:7:5-25:19
+28        android:name="com.escalab_examen_react_native.MainApplication"
+28-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:8:7-38
+29        android:allowBackup="false"
+29-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:12:7-34
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.1.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:10:7-41
+33        android:label="@string/app_name"
+33-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:9:7-39
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:11:7-52
+35        android:theme="@style/AppTheme"
+35-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:13:7-38
+36        android:usesCleartextTraffic="true" >
+36-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:8:9-44
+37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+37-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:11:9-86
+37-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/debug/AndroidManifest.xml:11:19-83
+38        <activity
+38-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:14:7-24:18
+39            android:name="com.escalab_examen_react_native.MainActivity"
+39-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:15:9-37
+40            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+40-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:17:9-86
+41            android:label="@string/app_name"
+41-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:16:9-41
+42            android:launchMode="singleTask"
+42-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:18:9-40
+43            android:windowSoftInputMode="adjustResize" >
+43-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:19:9-51
+44            <intent-filter>
+44-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:20:9-23:25
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:21:13-65
+45-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:21:21-62
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:22:13-73
+47-->/Users/diego/Desktop/escalab_examen_react_native/android/app/src/main/AndroidManifest.xml:22:23-70
+48            </intent-filter>
+49        </activity>
+50
+51        <service
+51-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:29:9-35:19
+52            android:name="com.google.firebase.components.ComponentDiscoveryService"
+52-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:30:13-84
+53            android:exported="false" >
+53-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:31:13-37
+54            <meta-data
+54-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:32:13-34:85
+55                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+55-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:33:17-96
+56                android:value="com.google.firebase.components.ComponentRegistrar" />
+56-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:34:17-82
+57        </service>
+58
+59        <receiver
+59-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:37:9-44:20
+60            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+60-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:38:13-78
+61            android:exported="true"
+61-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:39:13-36
+62            android:permission="com.google.android.c2dm.permission.SEND" >
+62-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:40:13-73
+63            <intent-filter>
+63-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:41:13-43:29
+64                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+64-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:42:17-81
+64-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:42:25-78
+65            </intent-filter>
+66        </receiver>
+67        <!--
+68             FirebaseInstanceIdService performs security checks at runtime,
+69             no need for explicit permissions despite exported="true"
+70        -->
+71        <service
+71-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:50:9-56:19
+72            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+72-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:51:13-77
+73            android:exported="true" >
+73-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:52:13-36
+74            <intent-filter android:priority="-500" >
+74-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:53:13-55:29
+74-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:53:28-51
+75                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+75-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:54:17-80
+75-->[com.google.firebase:firebase-iid:17.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/e3e6142d29ef1108c7f742ffae82cb84/jetified-firebase-iid-17.0.3/AndroidManifest.xml:54:25-77
+76            </intent-filter>
+77        </service>
+78
+79        <activity
+79-->[com.google.android.gms:play-services-base:16.0.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/beb97bd9da6873822124083500a7a948/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+80            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+80-->[com.google.android.gms:play-services-base:16.0.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/beb97bd9da6873822124083500a7a948/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+81            android:exported="false"
+81-->[com.google.android.gms:play-services-base:16.0.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/beb97bd9da6873822124083500a7a948/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+82            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+82-->[com.google.android.gms:play-services-base:16.0.1] /Users/diego/.gradle/caches/transforms-2/files-2.1/beb97bd9da6873822124083500a7a948/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+83
+84        <provider
+84-->[com.google.firebase:firebase-common:16.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/392e660b762bd612a2af87c4defb65c2/jetified-firebase-common-16.0.3/AndroidManifest.xml:10:9-14:39
+85            android:name="com.google.firebase.provider.FirebaseInitProvider"
+85-->[com.google.firebase:firebase-common:16.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/392e660b762bd612a2af87c4defb65c2/jetified-firebase-common-16.0.3/AndroidManifest.xml:11:13-77
+86            android:authorities="com.escalab_examen_react_native.firebaseinitprovider"
+86-->[com.google.firebase:firebase-common:16.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/392e660b762bd612a2af87c4defb65c2/jetified-firebase-common-16.0.3/AndroidManifest.xml:12:13-72
+87            android:exported="false"
+87-->[com.google.firebase:firebase-common:16.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/392e660b762bd612a2af87c4defb65c2/jetified-firebase-common-16.0.3/AndroidManifest.xml:13:13-37
+88            android:initOrder="100" />
+88-->[com.google.firebase:firebase-common:16.0.3] /Users/diego/.gradle/caches/transforms-2/files-2.1/392e660b762bd612a2af87c4defb65c2/jetified-firebase-common-16.0.3/AndroidManifest.xml:14:13-36
+89
+90        <meta-data
+90-->[com.google.android.gms:play-services-basement:16.1.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/a55167b4f592adbcfba66466046ff885/jetified-play-services-basement-16.1.0/AndroidManifest.xml:23:9-25:69
+91            android:name="com.google.android.gms.version"
+91-->[com.google.android.gms:play-services-basement:16.1.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/a55167b4f592adbcfba66466046ff885/jetified-play-services-basement-16.1.0/AndroidManifest.xml:24:13-58
+92            android:value="@integer/google_play_services_version" />
+92-->[com.google.android.gms:play-services-basement:16.1.0] /Users/diego/.gradle/caches/transforms-2/files-2.1/a55167b4f592adbcfba66466046ff885/jetified-play-services-basement-16.1.0/AndroidManifest.xml:25:13-66
+93    </application>
+94
+95</manifest>

@@ -9,6 +9,7 @@ import MenuContent from "../screen/Menu/MenuContent";
 import Detail from "../screen/Common/Detail";
 import DetailSerie from "../screen/Common/DetailSerie";
 import DetailActor from "../screen/Common/DetailActor";
+import Camera from "../screen/Photo/Camera";
 
 const Drawer = createDrawerNavigator();
 
@@ -22,6 +23,7 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="detalle" component={Detail} />
       <Drawer.Screen name="detalleSerie" component={DetailSerie} />
       <Drawer.Screen name="detalleActor" component={DetailActor} />
+      <Drawer.Screen name="camera" component={Camera} />
     </Drawer.Navigator>
   );
 };

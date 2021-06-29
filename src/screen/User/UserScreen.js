@@ -5,10 +5,11 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
+  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icon from "react-native-vector-icons/Entypo";
-
+import * as RootNavigation from "../../routes/RootNavigation";
 import { LoginUserContext } from "../../contexts/LoginContextProvider";
 
 const styles = StyleSheet.create({
@@ -53,11 +54,15 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "800",
   },
+  imageCamera: {
+    width: 200,
+    height: 200,
+    resizeMode: "cover",
+  },
 });
 
 const UserScreen = () => {
   const { store, dispatch } = useContext(LoginUserContext);
-  // const { email, name, lastName, phone } = store;
 
   const getInfoUser = async () => {
     await AsyncStorage.getItem("user").then((data) => {
@@ -97,15 +102,23 @@ const UserScreen = () => {
   return (
     <View style={styles.content}>
       {/* Cambiar fotográfica con camara */}
-      <TouchableOpacity style={styles.avatarContent} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.avatarContent}
+        onPress={() => RootNavigation.navigate("camera")}
+      >
         <View>
-          <View style={styles.avatar}>
-            <Icon name="user" size={100} />
-            <View style={styles.icon}>
-              <Icon name="camera" size={20} />
-              <Text> Tomar un foto</Text>
+          {store.avatar == "" ? (
+            <View style={styles.avatar}>
+              <Icon name="user" size={100} />
+
+              <View style={styles.icon}>
+                <Icon name="camera" size={20} />
+                <Text> Tomar un foto</Text>
+              </View>
             </View>
-          </View>
+          ) : (
+            <Image source={{ uri: store.avatar }} style={styles.imageCamera} />
+          )}
         </View>
       </TouchableOpacity>
 

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { LoginUserContext } from "../../contexts/LoginContextProvider";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as RootNavigation from "../../routes/RootNavigation";
@@ -23,6 +23,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
     width: "100%",
+  },
+  imageCamera: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    resizeMode: "cover",
   },
 });
 
@@ -56,9 +62,12 @@ const MenuHeader = () => {
     <TouchableOpacity onPress={() => RootNavigation.navigate("perfil")}>
       <View style={styles.avatarContainer}>
         <View style={styles.avatarImg}>
-          <Icon name="user" size={95} />
+          {store.avatar == "" ? (
+            <Icon name="user" size={95} />
+          ) : (
+            <Image source={{ uri: store.avatar }} style={styles.imageCamera} />
+          )}
         </View>
-
         <View style={styles.avatarText}>
           <Text style={{ fontSize: 21, textAlign: "center", marginBottom: 5 }}>
             {name} {lastName}

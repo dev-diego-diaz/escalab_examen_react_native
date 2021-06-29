@@ -11,6 +11,7 @@ const userReducer = (state, action) => {
         return {
           ...state,
           nickname: action.payload.nickname,
+          avatar: "",
           name: "",
           lastName: "",
           email: "",
@@ -23,6 +24,7 @@ const userReducer = (state, action) => {
         return {
           ...state,
           nickname: "",
+          avatar: "",
           name: "",
           lastName: "",
           email: "",
@@ -73,6 +75,13 @@ const userReducer = (state, action) => {
       return data;
     }
 
+    case "TAKE_PHOTO": {
+      return {
+        ...state,
+        avatar: action.payload.avatar,
+      };
+    }
+
     default:
       return state;
   }
@@ -80,6 +89,7 @@ const userReducer = (state, action) => {
 
 const defaultState = {
   nickname: "",
+  avatar: "",
   name: "",
   lastName: "",
   email: "",

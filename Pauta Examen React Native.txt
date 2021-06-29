@@ -25,12 +25,14 @@
 [Ok] 9) (20%) Se debe utilizar ES6+ (string literales, arrow functions, spread operator, desestructuración, async/await, etc). 
 [Ok] 10) (10%) Diseño de los componentes, aplicar uso de flex y Stylesheet.
 
-[--] 11) BONUS (10% extra) (puede ser alguno de los dos a continuación): 
+[Ok] 11) BONUS (10% extra) (puede ser alguno de los dos a continuación): 
     a) Agregar el módulo nativo para sacar foto 
     (https://github.com/react-native-camera/react-native-camera)
 
     b) Agregar módulo nativo para seleccionar alguna foto de la librería del dispositivo 
-    (https://github.com/react-native-image-picker/react-native-image-picker) Total con bonus: 110% 
+    (https://github.com/react-native-image-picker/react-native-image-picker) 
+    
+Total con bonus: 110% 
 
 
 
