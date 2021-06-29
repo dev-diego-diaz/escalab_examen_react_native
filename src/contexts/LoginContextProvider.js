@@ -7,7 +7,10 @@ export const LoginUserContext = createContext();
 const userReducer = (state, action) => {
   switch (action.type) {
     case "LOG_IN": {
-      if (action.payload.nickname === "a" && action.payload.password === "1") {
+      if (
+        action.payload.nickname === "di.diazo" &&
+        action.payload.password === "12345"
+      ) {
         return {
           ...state,
           nickname: action.payload.nickname,
