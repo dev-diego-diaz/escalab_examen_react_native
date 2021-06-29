@@ -11,12 +11,14 @@ La aplicación se divide en tres grupos:
 
 1.  Autentificación de usuario:
     La aplicación cuenta con autentificación de usuario.
-
-        *usuario:* di.diazo
-
-        *contraseña:* 12345
-
-        Una vez el usuario se ha autentificado, al presionar el botón volver de android, este no volverá a mostrar el formulario de logueo a menos que este cierre la sesión.
+    <br>
+    <br>
+    _usuario:_ di.diazo
+    <br>
+    _contraseña:_ 12345
+    <br>
+    <br>
+    Una vez el usuario se ha autentificado, al presionar el botón volver de android, este no volverá a mostrar el formulario de logueo a menos que este cierre la sesión.
 
 2.  Perfil de usuario:
     En el cual se puede modificar la información del usuario (nombre, apellido, email y numero telefónico) la cual persiste al momento de cerrar la aplicación. Por otro lado, también cuenta con la funcionalidad de tomar una fotografía para el perfil del usuario, dando la opción a este de elegir la cámara principal o frontal (La fotografía obtenida no persistirá en el equipo).
